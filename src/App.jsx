@@ -1,28 +1,28 @@
 import React from 'react'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Page from './pages/Page'
 import Page2 from './pages/Page2'
 import HomePage from './pages/HomePage'
 import NotFound from './pages/NotFound'
+import { stack as Menu } from 'react-burger-menu'
+// import Logo from '../src/Images/favicon.ico'
 
 const App = () => {
   return (
     <Router>
-      <header>
-        <h1>Welcome to my SPA</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Go Home</Link>
-            </li>
-            <li>
-              <Link to="/1">Page 1</Link>
-            </li>
-            <li>
-              <Link to="/2">Page 2</Link>
-            </li>
-          </ul>
-        </nav>
+      <header className="header">
+        <Menu right>
+          <a to="/" id="home" className="menu-item" href="/">
+            Home
+          </a>
+          <a to="/1" id="about" className="menu-item" href="/about">
+            Random Mural
+          </a>
+          <a to="/2" id="contact" className="menu-item" href="/contact">
+            Favorites
+          </a>
+        </Menu>
+        <h1>Mural Tour</h1>
       </header>
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
