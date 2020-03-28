@@ -33,12 +33,20 @@ const HomePage = () => {
             Come find the murals of Tampa Bay with us! Sign up or Sign in below
             to start finding Murals!
           </h5>
-          <button>Sign Up!</button>
-          <button>Sign In!</button>
+          <form action="">
+            <button>Sign Up!</button>
+            <button>Sign In!</button>
+          </form>
         </section>
       </main>
+      <section className="imageCarousel"></section>
       <footer>
-        <p>Made with care and 💙💜🖤</p>
+        <p>
+          Made with care and{' '}
+          <span role="img" alt="emoji hearts">
+            💙💜🖤
+          </span>
+        </p>
       </footer>
     </>
   )

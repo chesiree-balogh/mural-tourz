@@ -4,6 +4,9 @@ import Page from './pages/Page'
 import Page2 from './pages/Page2'
 import HomePage from './pages/HomePage'
 import NotFound from './pages/NotFound'
+import Login from './pages/Login'
+import SignUp from './pages/SignUp'
+
 import { stack as Menu } from 'react-burger-menu'
 // import Logo from '../src/Images/favicon.ico'
 
@@ -15,19 +18,23 @@ const App = () => {
           <a to="/" id="home" className="menu-item" href="/">
             Home
           </a>
-          <a to="/1" id="about" className="menu-item" href="/about">
+          <a to="/1" id="random" className="menu-item" href="/random">
             Random Mural
           </a>
-          <a to="/2" id="contact" className="menu-item" href="/contact">
-            Favorites
+          <a to="/login" id="login" className="menu-item" href="/login">
+            Login
+          </a>
+          <a to="/signUp" id="contact" className="menu-item" href="/contact">
+            Sign Up!
           </a>
         </Menu>
         <h1>Mural Tour</h1>
       </header>
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
-        <Route exact path="/1" component={Page}></Route>
-        <Route exact path="/2" component={Page2}></Route>
+        <Route exact path="/random" component={Page}></Route>
+        <Route exact path="/login" component={Login}></Route>
+        <Route exact path="/signUp" component={SignUp}></Route>
         <Route path="*" component={NotFound}></Route>
       </Switch>
     </Router>
