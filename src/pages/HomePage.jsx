@@ -15,6 +15,7 @@ const HomePage = () => {
   return (
     <>
       <section>
+        {/* maybe use an image carousel here instead? */}
         <section className="hero"></section>
       </section>
       <main>
